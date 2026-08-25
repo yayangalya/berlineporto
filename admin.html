@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#ffc5df" />
+
+  <title>Admin — Berline's Portofolioo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gaegu:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- v=3 digunakan supaya browser tidak memakai file cache lama -->
+  <link rel="stylesheet" href="admin.css?v=9" />
+
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="supabase-config.js?v=9"></script>
+  <script defer src="admin.js?v=9"></script>
+</head>
+
+<body>
+  <main class="admin-shell">
+    <header class="admin-titlebar">
+      <div>
+        <span aria-hidden="true">🎀</span>
+        Admin — Berline's Portofolioo
+      </div>
+
+      <div class="fake-controls" aria-hidden="true">
+        <i>—</i>
+        <i>□</i>
+        <i>×</i>
+      </div>
+    </header>
+
+    <nav class="admin-nav">
+      <a href="index.html?v=9">← Lihat Frontend</a>
+      <span>private area · only Berline ♡</span>
+    </nav>
+
+    <!-- HALAMAN LOGIN -->
+    <section class="login-view" id="loginView">
+      <div class="login-card">
+        <div class="login-avatar" aria-hidden="true">🔐</div>
+
+        <p class="eyebrow">
+          owner access only (˵ •̀ ᴗ - ˵ ) ✧
+        </p>
+
+        <h1>Masuk sebagai Admin</h1>
+
+        <p class="login-copy">
+          Halaman ini khusus untuk mengatur karya dan file portfolio milik Berline.
+        </p>
+
+        <form id="loginForm" novalidate>
+          <label>
+            <span>Email</span>
+
+            <input
+              id="loginEmail"
+              type="email"
+              autocomplete="username"
+              required
+              placeholder="email admin"
+            />
+          </label>
+
+          <label>
+            <span>Password</span>
+
+            <input
+              id="loginPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="6"
+              placeholder="••••••••"
+            />
+          </label>
+
+          <button class="primary-button" type="submit">
+            Masuk ke Dashboard ✦
+          </button>
+        </form>
+
+        <p
+          class="form-message"
+          id="loginMessage"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </div>
+    </section>
+
+    <!-- HALAMAN DASHBOARD -->
+    <section class="dashboard" id="dashboardView" hidden>
+      <header class="dashboard-heading">
+        <div>
+          <p class="eyebrow">
+            welcome back, admin! ૮ ˶ᵔ ᵕ ᵔ˶ ა
+          </p>
+
+          <h1>Kelola Portofolio Ku</h1>
+
+          <p id="adminIdentity">
+            memuat akun...
+          </p>
+        </div>
+
+        <button
+          class="secondary-button"
+          id="logoutButton"
+          type="button"
+        >
+          Keluar
+        </button>
+      </header>
+
+      <div class="dashboard-grid">
+        <!-- UPLOAD KARYA -->
+        <section
+          class="admin-window upload-window"
+          aria-labelledby="uploadHeading"
+        >
+          <div class="window-title">
+            <span>🖼️</span>
+            <b>upload_artwork.exe</b>
+            <i>×</i>
+          </div>
+
+          <div class="window-content">
+            <p class="mini-label">
+              add something pretty ♡
+            </p>
+
+            <h2 id="uploadHeading">
+              Upload Karya Baru
+            </h2>
+
+            <form id="artworkForm" novalidate>
+              <div class="field-grid">
+                <label>
+                  <span>Judul karya</span>
+
+                  <input
+                    id="artworkTitle"
+                    type="text"
+                    maxlength="120"
+                    required
+                    placeholder="contoh: Poster Soekarno"
+                  />
+                </label>
+
+                <label>
+                  <span>Kategori</span>
+
+                  <select id="artworkCategory" required>
+                    <option value="POSTER">POSTER</option>
+                    <option value="INFOGRAFIS">INFOGRAFIS</option>
+                    <option value="BANNER">BANNER</option>
+                    <option value="LOGO">LOGO</option>
+                    <option value="PAMFLET">PAMFLET</option>
+                    <option value="FEEDS">FEEDS</option>
+                    <option value="LAINNYA">LAINNYA</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                <span>Caption</span>
+
+                <textarea
+                  id="artworkCaption"
+                  maxlength="350"
+                  rows="3"
+                  placeholder="contoh: Design Poster Soekarno made by Berline."
+                ></textarea>
+              </label>
+
+              <label>
+                <span>Teks alternatif gambar</span>
+
+                <input
+                  id="artworkAlt"
+                  type="text"
+                  maxlength="180"
+                  placeholder="Jelaskan singkat isi gambar"
+                />
+              </label>
+
+              <label class="file-drop" for="artworkFile">
+                <input
+                  id="artworkFile"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  required
+                />
+
+                <span class="drop-icon" aria-hidden="true">
+                  ☁
+                </span>
+
+                <b id="artworkFileLabel">
+                  Pilih gambar karya
+                </b>
+
+                <small>
+                  JPG, PNG, atau WEBP · maksimal 50 MB · watermark otomatis di tengah
+                </small>
+              </label>
+
+              <button
+                class="primary-button"
+                id="uploadArtworkButton"
+                type="submit"
+              >
+                Upload ke Portofolio ✦
+              </button>
+            </form>
+
+            <p
+              class="form-message"
+              id="artworkMessage"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </section>
+
+        <!-- PDF PRIVATE -->
+        <aside
+          class="admin-window pdf-window"
+          aria-labelledby="pdfHeading"
+        >
+          <div class="window-title">
+            <span>📄</span>
+            <b>private_pdf.exe</b>
+            <i>×</i>
+          </div>
+
+          <div class="window-content">
+            <p class="mini-label">
+              private document (admin only)
+            </p>
+
+            <h2 id="pdfHeading">
+              PDF Portfolio
+            </h2>
+
+            <p>
+              File ini tidak ditampilkan di frontend. Hanya admin yang sudah
+              login yang dapat mengunggah atau mengunduhnya.
+            </p>
+
+            <label class="file-drop compact" for="pdfFile">
+              <input
+                id="pdfFile"
+                type="file"
+                accept="application/pdf"
+              />
+
+              <span class="drop-icon" aria-hidden="true">
+                PDF
+              </span>
+
+              <b id="pdfFileLabel">
+                Pilih file PDF
+              </b>
+
+              <small>
+                maksimal 25 MB
+              </small>
+            </label>
+
+            <div class="pdf-actions">
+              <button
+                class="primary-button"
+                id="uploadPdfButton"
+                type="button"
+              >
+                Upload / Ganti PDF
+              </button>
+
+              <button
+                class="secondary-button"
+                id="downloadPdfButton"
+                type="button"
+              >
+                Download PDF Ku
+              </button>
+            </div>
+
+            <p
+              class="form-message"
+              id="pdfMessage"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- DAFTAR KARYA -->
+      <section
+        class="admin-window library-window"
+        aria-labelledby="libraryHeading"
+      >
+        <div class="window-title">
+          <span>🎨</span>
+          <b>my_artworks.folder</b>
+          <i>×</i>
+        </div>
+
+        <div class="window-content">
+          <div class="library-heading">
+            <div>
+              <p class="mini-label">
+                your current collection ♡
+              </p>
+
+              <h2 id="libraryHeading">
+                Karya yang Sudah Di-upload
+              </h2>
+            </div>
+
+            <button
+              class="secondary-button"
+              id="refreshButton"
+              type="button"
+            >
+              Muat Ulang
+            </button>
+          </div>
+
+          <div class="admin-loading" id="adminLoading">
+            sedang membuka koleksi... ♡
+          </div>
+
+          <div
+            class="admin-gallery"
+            id="adminGallery"
+          ></div>
+
+          <div
+            class="admin-empty"
+            id="adminEmpty"
+            hidden
+          >
+            Belum ada karya yang di-upload (｡•́︿•̀｡)
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

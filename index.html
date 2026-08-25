@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Berline's Porto — lihat-lihat hasil desain poster, infografis, banner, logo, pamflet, feeds, dan visual content sebelum order."
+    />
+
+    <meta name="theme-color" content="#ffc5df" />
+
+    <title>Berline's Porto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gaegu:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Versi file dibuat berbeda agar browser tidak memakai cache lama -->
+    <link rel="stylesheet" href="style.css?v=9" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script
+      defer
+      src="supabase-config.js?v=9"
+    ></script>
+
+    <script
+      defer
+      src="script.js?v=9"
+    ></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#mainContent">
+      Lewati ke isi utama
+    </a>
+
+    <div class="background-stickers" aria-hidden="true">
+      <span class="sticker sticker-bow">୨୧</span>
+      <span class="sticker sticker-flower">✿</span>
+      <span class="sticker sticker-star">☆</span>
+      <span class="sticker sticker-heart">♡</span>
+      <span class="sticker sticker-spark">✦</span>
+    </div>
+
+    <div class="site-shell">
+      <header class="site-header" id="top">
+        <div class="window-titlebar">
+          <div class="window-brand">
+            <span class="brand-icon" aria-hidden="true">
+              🎀
+            </span>
+
+            <span>
+              Berline's Portofolio
+            </span>
+          </div>
+
+          <p class="mini-status">
+            <span
+              class="status-dot"
+              aria-hidden="true"
+            ></span>
+
+            <span id="liveClock">
+              online
+            </span>
+          </p>
+
+          <div class="window-controls" aria-hidden="true">
+            <span>—</span>
+            <span>□</span>
+            <span>×</span>
+          </div>
+        </div>
+
+        <nav
+          class="main-nav"
+          aria-label="Navigasi utama"
+        >
+          <a
+            href="#home"
+            class="nav-link is-active"
+          >
+            <span>⌂</span>
+            Home
+          </a>
+
+          <a
+            href="#karya"
+            class="nav-link"
+          >
+            <span>▧</span>
+            My Porto
+          </a>
+
+          <a
+            href="#tentang"
+            class="nav-link"
+          >
+            <span>♡</span>
+            About Me
+          </a>
+
+          <a
+            href="#contact"
+            class="nav-link"
+          >
+            <span>✉</span>
+            Order Here
+          </a>
+        </nav>
+
+        <div
+          class="marquee-strip"
+          aria-label="Pesan selamat datang"
+        >
+          <div class="marquee-content">
+            welcome to my portofolio portal ✦ lihat-lihat porto dulu,
+            kalau suka langsung order yaa (˶ᵔ ᵕ ᵔ˶) ♡
+          </div>
+        </div>
+      </header>
+
+      <main id="mainContent">
+        <!-- HOME -->
+        <section
+          class="hero section-pad"
+          id="home"
+        >
+          <div class="hero-copy">
+            <p class="eyebrow">
+              welcome to my portal + .｡.:*☆
+            </p>
+
+            <h1>
+              Hayie, I'm <span>Berline!</span>
+            </h1>
+
+            <p class="hero-lead">
+              Hi, aku Berline! Web ini khusus buat seluruh porto,
+              jadi kalau kamu mau lihat-lihat hasil desain sebelum order,
+              semuanya sudah ku kumpulin di sini. Kalo ditanya "ada porto?"
+              jawabannya ada sayang adaaaa. GABOLEH COPY APAPUN YAAAA.ᐟ.ᐟ
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="pixel-button button-pink"
+                href="#karya"
+              >
+                <span aria-hidden="true">✦</span>
+                Lihat Result
+              </a>
+
+              <a
+                class="pixel-button button-blue"
+                href="#contact"
+              >
+                <span aria-hidden="true">♡</span>
+                Order di Sini
+              </a>
+            </div>
+
+            <div class="tiny-note">
+              <span aria-hidden="true">✎</span>
+              lihat boleh—copy jangan, nanti aku cubit! (｡•̀ᴗ-)✧
+            </div>
+          </div>
+
+          <aside
+            class="profile-window"
+            aria-label="Profil singkat Berline"
+          >
+            <div class="profile-label">
+              it's me! ૮ ˶ᵔ ᵕ ᵔ˶ ა
+            </div>
+
+            <div class="profile-photo-frame">
+              <img
+                class="profile-photo"
+                src="assets/profile.jpg"
+                alt="Foto Berline"
+              />
+
+              <span
+                class="photo-tape tape-left"
+                aria-hidden="true"
+              ></span>
+
+              <span
+                class="photo-tape tape-right"
+                aria-hidden="true"
+              ></span>
+            </div>
+
+            <div
+              class="profile-chip-row"
+              aria-hidden="true"
+            >
+              <span>🎨 colors</span>
+              <span>✎ layout</span>
+              <span>✦ stories</span>
+            </div>
+
+            <p class="profile-signature">
+              — Berline ♡
+            </p>
+          </aside>
+        </section>
+
+        <!-- KATEGORI -->
+        <section
+          class="category-dock"
+          aria-labelledby="categoryHeading"
+        >
+          <div class="section-ribbon">
+            <span aria-hidden="true">୨୧</span>
+
+            <div>
+              <p>
+                mau order desain apa nih? ^/***^
+              </p>
+
+              <h2 id="categoryHeading">
+                Cari Result Disini
+              </h2>
+            </div>
+
+            <span aria-hidden="true">୨୧</span>
+          </div>
+
+          <p class="category-intro">
+            pilih kategorinya dulu yaa, siapa tahu ada style
+            yang kamu suka buat order ♡
+          </p>
+
+          <div
+            class="category-tabs"
+            role="tablist"
+            aria-label="Kategori karya"
+          >
+            <button
+              class="category-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-category="POSTER"
+            >
+              <span aria-hidden="true">▤</span>
+              POSTER
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="INFOGRAFIS"
+            >
+              <span aria-hidden="true">▥</span>
+              INFOGRAFIS
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="BANNER"
+            >
+              <span aria-hidden="true">▰</span>
+              BANNER
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="LOGO"
+            >
+              <span aria-hidden="true">✿</span>
+              LOGO
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="PAMFLET"
+            >
+              <span aria-hidden="true">▱</span>
+              PAMFLET
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="FEEDS"
+            >
+              <span aria-hidden="true">▦</span>
+              FEEDS
+            </button>
+
+            <button
+              class="category-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-category="LAINNYA"
+            >
+              <span aria-hidden="true">✧</span>
+              LAINNYA
+            </button>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section
+          class="portfolio-section section-pad"
+          id="karya"
+          aria-labelledby="portfolioHeading"
+        >
+          <div class="content-window">
+            <div class="content-titlebar">
+              <span aria-hidden="true">🖼️</span>
+
+              <p>
+                my porto /
+                <strong id="activeCategoryPath">
+                  poster
+                </strong>
+              </p>
+
+              <div aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+
+            <div class="portfolio-heading-row">
+              <div>
+                <p class="eyebrow">
+                  result ada di sini ♡
+                </p>
+
+                <h2 id="portfolioHeading">
+                  POSTER <span>✦</span>
+                </h2>
+              </div>
+
+              <span class="counter-badge">
+                <b id="portfolioCount">0</b>
+                karya
+              </span>
+            </div>
+
+            <div
+              class="loading-box"
+              id="loadingBox"
+              role="status"
+            >
+              <span
+                class="loading-heart"
+                aria-hidden="true"
+              >
+                ♡
+              </span>
+
+              sedang membuka result...
+            </div>
+
+            <div
+              class="portfolio-grid"
+              id="portfolioGrid"
+              aria-live="polite"
+            ></div>
+
+            <div
+              class="empty-box"
+              id="emptyBox"
+              hidden
+            >
+              <span
+                class="empty-face"
+                aria-hidden="true"
+              >
+                (｡•́︿•̀｡)
+              </span>
+
+              <h3>
+                Belum ada result kategori ini
+              </h3>
+
+              <p>
+                Nanti kalau sudah ku tambahkan, hasil desainnya
+                bakal muncul dengan slay di sini ♡
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section
+          class="about-section section-pad"
+          id="tentang"
+          aria-labelledby="aboutHeading"
+        >
+          <div
+            class="about-photo-card"
+            aria-hidden="true"
+          >
+            <div class="mini-polaroid">
+              <span>✿</span>
+
+              <strong>
+                create<br />
+                pretty<br />
+                things!
+              </strong>
+            </div>
+
+            <span class="doodle-arrow">
+              ↝
+            </span>
+          </div>
+
+          <div class="about-copy content-window">
+            <div class="content-titlebar">
+              <span aria-hidden="true">
+                💌
+              </span>
+
+              <p>
+                A LITTLE NOTE FROM BERLINE!
+              </p>
+
+              <div aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+
+            <div class="about-inner">
+              <p class="eyebrow">
+                little note about me (˵ •̀ ᴗ - ˵ ) ✧
+              </p>
+
+              <h2 id="aboutHeading">
+                I'm Berline <span>+</span>
+              </h2>
+
+              <p>
+                hi! nama Ku Berline, the one who loves pinky things—uh,
+                forget it! Semua yang ada di sini adalah hasil editan ku.
+                Udah lihat-lihat dan tertarik? langsung chat Telegram
+                @Berrline yaa! ♡
+              </p>
+
+              <div
+                class="skill-ticker"
+                aria-label="Keahlian desain"
+              >
+                <span>Poster</span>
+                <span>Infografis</span>
+                <span>Banner</span>
+                <span>Logo</span>
+                <span>Pamflet</span>
+                <span>Feeds</span>
+                <span>Lainnya</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section
+          class="contact-section section-pad"
+          id="contact"
+          aria-labelledby="contactHeading"
+        >
+          <div class="contact-card">
+            <span
+              class="contact-stamp"
+              aria-hidden="true"
+            >
+              MAIL<br />
+              ♡
+            </span>
+
+            <p class="eyebrow">
+              ready to order something pretty?
+              ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა
+            </p>
+
+            <h2 id="contactHeading">
+              ORDER HERE ✦
+            </h2>
+
+            <p>
+              Udah nemu style yang kamu suka? langsung order
+              melalui kontak yang tertera yaa! ♡
+            </p>
+
+            <div class="contact-links">
+              <a
+                href="#"
+                data-contact="whatsapp"
+                aria-label="Hubungi Berline melalui WhatsApp"
+              >
+                <span aria-hidden="true">☏</span>
+                <b>WhatsApp</b>
+                <small>order via chat</small>
+              </a>
+
+              <a
+                href="#"
+                data-contact="x"
+                aria-label="Lihat akun X Berline"
+              >
+                <span aria-hidden="true">◎</span>
+                <b>X</b>
+                <small>see my updates</small>
+              </a>
+
+              <a
+  href="https://t.me/berrline"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Hubungi Berline melalui Telegram"
+>
+                <span aria-hidden="true">✉</span>
+                <b>Telegram</b>
+                <small>order via telegram</small>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span aria-hidden="true">
+            🎀
+          </span>
+
+          <div>
+            <strong>
+              Berline
+            </strong>
+
+            <small>
+              @Berrline On Telegram ♡
+            </small>
+          </div>
+        </div>
+
+        <nav aria-label="Navigasi footer">
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#karya">
+            My Result
+          </a>
+
+          <a href="#tentang">
+            About Me
+          </a>
+
+          <a href="#contact">
+            Order Here
+          </a>
+        </nav>
+
+        <p>
+          Made with ♡ by Berline ©
+          <span id="currentYear">2026</span>
+          — lihat porto, pilih style, lalu order yaa (˶ᵔ ᵕ ᵔ˶)
+        </p>
+      </footer>
+    </div>
+
+    <!-- MODAL DETAIL -->
+    <dialog
+      class="detail-modal"
+      id="detailModal"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-window">
+        <div class="content-titlebar">
+          <span aria-hidden="true">
+            ♡
+          </span>
+
+          <p>
+            artwork_preview.exe
+          </p>
+
+          <button
+            class="modal-close"
+            id="modalClose"
+            type="button"
+            aria-label="Tutup detail"
+          >
+            ×
+          </button>
+        </div>
+
+        <div class="modal-content">
+          <div class="modal-image-wrap">
+            <img
+              id="modalImage"
+              src=""
+              alt=""
+            />
+
+            <span class="watermark">
+              BERLINE'S PORTOFOLIOO - COPYRIGHT ©
+            </span>
+          </div>
+
+          <div class="modal-copy">
+            <span
+              class="modal-category"
+              id="modalCategory"
+            ></span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalCaption"></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <noscript>
+      <div class="noscript-note">
+        Aktifkan JavaScript agar galeri porto dapat ditampilkan yaa ♡
+      </div>
+    </noscript>
+  </body>
+</html>
