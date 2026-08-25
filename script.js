@@ -111,7 +111,7 @@
 
       caption: String(
         item.caption ||
-          `Design ${title} made by Berline.`
+          `Design ${title} `
       )
         .trim()
         .slice(0, 350),
