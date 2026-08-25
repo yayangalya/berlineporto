@@ -651,7 +651,7 @@
 
     const caption =
       elements.artworkCaption.value.trim() ||
-      `Design ${title} made by Berline.`;
+      `Design ${title} :3.`;
 
     const alt =
       elements.artworkAlt.value.trim() ||
